@@ -1,6 +1,11 @@
 .all {
-  margin: auto;
-  width: 80%;
+  margin: 5px auto;
+  width: 82%;
 
   overflow: hidden;
+}
+.carousel-caption {
+  background: rgba(80,216,144, 0.5);
+  border-radius:6px;
+  padding: 10px;
 }
