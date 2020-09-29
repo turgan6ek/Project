@@ -1,5 +1,6 @@
 footer{
-  position:absolute;
+  clear: both;
+  position:relative;
   bottom:0;
   width: 100%;
   background-color: #e0ece4;
