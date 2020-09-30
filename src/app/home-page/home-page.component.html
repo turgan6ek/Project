@@ -1,5 +1,5 @@
 <div class="main">
-  <app-img-carousel></app-img-carousel>
+  <app-img-carousel>ngAfterViewInit()</app-img-carousel>
   <app-list-page></app-list-page>
   <div class="more1">
       <button class="m-button" (click)="toggle()">
@@ -7,5 +7,5 @@
       </button>
   </div>
   <app-list-page *ngIf="displayChild"
-                   ></app-list-page>
+                   >ngOnChanges()</app-list-page>
 </div>

@@ -9,6 +9,7 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
   @Input() likes = 0;
   oldLikes=0;
   text;
+  private changengeLog: any;
   constructor() { }
   @Output() newLikeEvent = new EventEmitter<string>();
 
@@ -17,20 +18,22 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
     this.likes = this.likes % 2;
     if (this.likes == 1){
       this.text = "You liked this text";
+
     }
     else {
       this.text = '';
     }
+    console.log("You liked the card"+"\n"+"Number of likes:"+this.likes);
   }
   ngOnInit(): void {
+
   }
 
 
-  ngOnChanges(changes: SimpleChanges): void {
-
+  ngOnChanges(changes:SimpleChanges): void {
+    this.addLike();
   }
 
   ngDoCheck() {
-    console.log("You liked the card"+"\n"+"Number of likes:"+this.likes);
   }
 }

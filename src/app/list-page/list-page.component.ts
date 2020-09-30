@@ -9,7 +9,7 @@ export class ListPageComponent implements OnInit, OnChanges, DoCheck {
 
   likes = 0;
   constructor() {
-    console.log("ChildComponent:Constructor");
+    console.log("More cards are displayed");
   }
   ngOnInit(): void {
     this.likes = 0;

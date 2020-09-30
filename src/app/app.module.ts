@@ -11,6 +11,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { CardListComponent } from './card-list/card-list.component';
+import { AddNewComponent } from './add-new/add-new.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { CardListComponent } from './card-list/card-list.component';
     HomePageComponent,
     BlogPageComponent,
     ListPageComponent,
-    CardListComponent
+    CardListComponent,
+    AddNewComponent
   ],
   imports: [
     BrowserModule,
