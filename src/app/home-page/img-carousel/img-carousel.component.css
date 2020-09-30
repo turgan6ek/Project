@@ -1,7 +1,7 @@
 .all {
   margin: 5px auto;
-  width: 82%;
-
+  width: 80%;
+  border-radius: 10px;
   overflow: hidden;
 }
 .carousel-caption {

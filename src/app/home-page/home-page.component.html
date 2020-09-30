@@ -1,4 +1,11 @@
 <div class="main">
   <app-img-carousel></app-img-carousel>
-  <h1 style="text-align: center">Welcome</h1>
+  <app-list-page></app-list-page>
+  <div class="more1">
+      <button class="m-button" (click)="toggle()">
+        <p class="text-center">Click here to see more</p>
+      </button>
+  </div>
+  <app-list-page *ngIf="displayChild"
+                   [message]="'Hello'" ></app-list-page>
 </div>
