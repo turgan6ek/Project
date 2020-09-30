@@ -29,5 +29,8 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
   ngOnChanges(changes: SimpleChanges): void {
 
   }
-  ngDoCheck() {}
+
+  ngDoCheck() {
+    console.log("You liked the card"+"\n"+"Number of likes:"+this.likes);
+  }
 }

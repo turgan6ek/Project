@@ -17,9 +17,9 @@ export class ListPageComponent implements OnInit, OnChanges, DoCheck {
 
   ngOnChanges(changes: SimpleChanges): void {
   }
-  
-  ngDoCheck() {
-    console.log("AppComponent:DoCheck");
+
+  ngDoCheck(): void {
   }
+
 
 }
