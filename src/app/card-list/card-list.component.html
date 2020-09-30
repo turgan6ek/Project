@@ -9,10 +9,11 @@
       et imperdiet lacus blandit id.  </p>
     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
     <div class="like">
-      <div class="card-button">
+      <div class="card-button" style="display: inline-block">
         <button class="like-button"  (click)="addLike()"></button>
+        <span style="font-size: 25px;">{{likes}}</span>
       </div>
-      <span>{{likes}}</span>
+
     </div>
   </div>
 </div>

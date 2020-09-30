@@ -12,7 +12,7 @@ export class ListPageComponent implements OnInit {
     console.log("ChildComponent:Constructor");
   }
   ngOnInit(): void {
-  this.likes;
+  this.likes = 0;
 
   }
 }
