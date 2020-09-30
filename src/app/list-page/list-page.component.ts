@@ -15,7 +15,4 @@ export class ListPageComponent implements OnInit {
   this.likes;
 
   }
-  liked() {
-  this.likes = this.likes+1;
-  }
 }

@@ -1,0 +1,18 @@
+.card {
+  height: 500px;
+  overflow: auto;
+  border-color: #50d890;
+}
+.card-button {
+  position:absolute;
+  bottom: 10px;
+
+}
+.like-button {
+  background:transparent url("like.png") no-repeat 50% 50%;
+  /* put the height and width of your image here */
+  height: 40px;
+  width: 40px;
+  border: none;
+  background-size: cover;
+}

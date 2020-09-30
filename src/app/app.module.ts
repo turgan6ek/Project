@@ -10,6 +10,7 @@ import {CarouselModule, MDBBootstrapModule, WavesModule} from 'angular-bootstrap
 import { HomePageComponent } from './home-page/home-page.component';
 import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
+import { CardListComponent } from './card-list/card-list.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ListPageComponent } from './list-page/list-page.component';
     ImgCarouselComponent,
     HomePageComponent,
     BlogPageComponent,
-    ListPageComponent
+    ListPageComponent,
+    CardListComponent
   ],
   imports: [
     BrowserModule,
