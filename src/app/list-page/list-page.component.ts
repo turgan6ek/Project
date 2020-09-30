@@ -7,12 +7,15 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class ListPageComponent implements OnInit {
 
-
-  @Input() message="";
+  likes = 0;
   constructor() {
     console.log("ChildComponent:Constructor");
   }
   ngOnInit(): void {
-  }
+  this.likes;
 
+  }
+  liked() {
+  this.likes = this.likes+1;
+  }
 }
