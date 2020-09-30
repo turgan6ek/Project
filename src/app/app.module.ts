@@ -8,13 +8,17 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ImgCarouselComponent } from './home-page/img-carousel/img-carousel.component';
 import {CarouselModule, MDBBootstrapModule, WavesModule} from 'angular-bootstrap-md';
 import { HomePageComponent } from './home-page/home-page.component';
+import { BlogPageComponent } from './blog-page/blog-page.component';
+import { ListPageComponent } from './list-page/list-page.component';
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     FooterComponent,
     ImgCarouselComponent,
-    HomePageComponent
+    HomePageComponent,
+    BlogPageComponent,
+    ListPageComponent
   ],
   imports: [
     BrowserModule,
