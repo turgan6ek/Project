@@ -1,12 +1,7 @@
 import {
-  AfterContentChecked,
-  AfterContentInit,
-  AfterViewChecked,
-  AfterViewInit,
-  Component, DoCheck,
+  Component,
   OnChanges,
-  OnDestroy,
-  OnInit, SimpleChanges
+  OnInit
 } from '@angular/core';
 
 @Component({
@@ -14,31 +9,17 @@ import {
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
-export class HomePageComponent implements  OnChanges, OnInit, DoCheck,
-  AfterContentInit {
+export class HomePageComponent implements  OnChanges, OnInit {
 
   displayChild: boolean = false;
   constructor() { console.log('AppComponent:Constructor'); }
 
   toggle() { this.displayChild = ! this.displayChild; }
 
-  ngOnInit(): void {
-  }
+  ngOnChanges() { console.log("AppComponent:OnChanges"); }
+  ngOnInit() { console.log("AppComponent:OnInit"); }
 
-  ngAfterContentChecked(): void {
-  }
 
-  ngAfterContentInit(): void {
-  }
-
-  ngAfterViewChecked(): void {
-  }
-
-  ngDoCheck(): void {
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-  }
 
 
 

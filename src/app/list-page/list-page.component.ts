@@ -1,11 +1,11 @@
-import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
+import {Component, Input, OnChanges, OnInit, SimpleChanges, DoCheck} from '@angular/core';
 
 @Component({
   selector: 'app-list-page',
   templateUrl: './list-page.component.html',
   styleUrls: ['./list-page.component.css']
 })
-export class ListPageComponent implements OnInit, OnChanges {
+export class ListPageComponent implements OnInit, OnChanges, DoCheck {
 
   likes = 0;
   constructor() {
@@ -17,7 +17,9 @@ export class ListPageComponent implements OnInit, OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
   }
-
-
+  
+  ngDoCheck() {
+    console.log("AppComponent:DoCheck");
+  }
 
 }
