@@ -3,7 +3,7 @@
   <app-list-page></app-list-page>
   <div class="more1">
       <button class="m-button" (click)="toggle()">
-        <p class="text-center" [ngStyle]="{'color':'white'}">C{{'LICK HERE TO SEE MORE'|lowercase|slice:0:10}}</p>
+        <p class="text-center" [ngStyle]="{'color':'white'}">C{{'LICK HERE TO SEE MORE'|lowercase}}</p>
       </button>
   </div>
   <app-list-page *ngIf="displayChild"
