@@ -12,6 +12,8 @@ import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { AddNewComponent } from './add-new/add-new.component';
+import {LikeModulePipe} from './card-list/LikeModule.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { AddNewComponent } from './add-new/add-new.component';
     BlogPageComponent,
     ListPageComponent,
     CardListComponent,
-    AddNewComponent
+    AddNewComponent,
+    LikeModulePipe
   ],
   imports: [
     BrowserModule,

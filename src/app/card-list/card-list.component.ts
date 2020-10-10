@@ -16,14 +16,7 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
 
   addLike() {
     this.likes++;
-    this.likes = this.likes % 2;
-    if (this.likes == 1){
-      this.text = "You liked this text";
 
-    }
-    else {
-      this.text = '';
-    }
     console.log("You liked the card"+"\n"+"Number of likes:"+this.likes);
   }
   ngOnInit(): void {
