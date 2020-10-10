@@ -12,6 +12,7 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
   private changengeLog: any;
   constructor() { }
   @Output() newLikeEvent = new EventEmitter<string>();
+  today: number = Date.now();
 
   addLike() {
     this.likes++;
