@@ -1,11 +1,18 @@
+
 <div class="main">
   <app-img-carousel>ngAfterViewInit()</app-img-carousel>
-  <app-list-page></app-list-page>
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <ng-container *ngIf="showFirst">
+      <app-card-list *ngFor="let list of list" [list]="list"  style="padding: 20px"></app-card-list>
+    </ng-container>
+
+  </div>
   <div class="more1">
       <button class="m-button" (click)="toggle()">
         <p class="text-center" [ngStyle]="{'color':'white'}">C{{'LICK HERE TO SEE MORE'|lowercase}}</p>
       </button>
   </div>
-  <app-list-page *ngIf="displayChild"
-                   >ngOnChanges()</app-list-page>
+  <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="displayChild">
+    <app-card-list *ngFor="let list of list2" [list]="list"  style="padding: 20px"></app-card-list>
+  </div>
 </div>

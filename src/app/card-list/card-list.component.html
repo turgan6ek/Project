@@ -1,22 +1,27 @@
 
-<div class="card-deck">
-<div class="card">
-  <img class="card-img-top" src="https://wallpaperset.com/w/full/8/1/c/489991.jpg" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Nunc iaculis turpis purus, ac convallis turpis ultrices quis. Duis molestie lobortis mauris,
-      et imperdiet lacus blandit id.  </p>
-    <p class="card-text"><small class="text-muted">Last updated on {{today  |  date:'mediumDate'}}</small></p>
-    <div class="like">
-      <div class="card-button" style="display: inline-block">
+  <div class="card  h-100" >
+    <img class="card-img-top" src="{{list.img}}" alt="Card image cap" height="200px;">
+    <div class="card-body">
+      <h5 class="card-title">{{list.name}}</h5>
+      <p class="card-text">
+        {{list.more}}
+      </p>
+      <p class="card-text">
+        <img src="water.png"> {{list.water_needs}}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+    </ul>
+    <div class="card-body" style="padding-bottom: 0;">
+      <p class="card-text"><small class="text-muted">Last updated on {{today  |  date:'mediumDate'}}</small></p>
+      <div class="like">
+        <div class="card-button" style="display: inline-block">
 
-        <button class="like-button" mdbPopover="Liked!" (click)="addLike()"></button>
-        <span style="font-size: 25px;">{{likes | likeConverter}}</span>
+          <button class="like-button" mdbPopover="Liked!" (click)="addLike()"></button>
+          <span style="font-size: 25px;">{{likes | likeConverter}}</span>
+
+        </div>
 
       </div>
-
     </div>
   </div>
-</div>
-</div>

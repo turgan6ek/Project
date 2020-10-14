@@ -1,10 +1,8 @@
 .all {
   width: 80%;
   margin: 20px auto;
-
+  padding: 20px;
 }
-.card {
-  height: 500px;
-  overflow: hidden;
-  border-color: #50d890;
+app-card-list {
+  padding: 20px;
 }

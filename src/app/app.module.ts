@@ -13,6 +13,13 @@ import { ListPageComponent } from './list-page/list-page.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import {LikeModulePipe} from './card-list/LikeModule.pipe';
+import { RouterModule } from '@angular/router';
+
+const routes = [
+  {path : '', component:HomePageComponent},
+  {path : 'blog-page', component:BlogPageComponent},
+  {path : 'list-page', component:ListPageComponent}
+]
 
 @NgModule({
   declarations: [
@@ -25,15 +32,19 @@ import {LikeModulePipe} from './card-list/LikeModule.pipe';
     ListPageComponent,
     CardListComponent,
     AddNewComponent,
-    LikeModulePipe
+    LikeModulePipe,
+
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     CarouselModule,
     MDBBootstrapModule.forRoot(),
-    WavesModule
+    WavesModule,
+    BrowserModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -7,6 +7,7 @@ import {Component, OnInit, Output, EventEmitter, Input, SimpleChanges, OnChanges
 })
 export class CardListComponent implements OnInit , DoCheck, OnChanges{
   @Input() likes = 0;
+  @Input() list;
   oldLikes=0;
   text;
   private changengeLog: any;
