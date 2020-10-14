@@ -1,10 +1,12 @@
 
 <div class="all">
-  <h1 class="text-center" style="color: #272727 ">Plants</h1>
+  <h1 class="text-center" style="color: #272727 ; font-family: Candara">Plants</h1>
 
   <br>
 
   <div class="row row-cols-md-3 row-cols-md-3 g-4">
     <app-card-list *ngFor="let list of list" [list]="list" ></app-card-list>
   </div>
+
+<app-add-new (newItemEvent)="addItem($event)"> </app-add-new>
 </div>

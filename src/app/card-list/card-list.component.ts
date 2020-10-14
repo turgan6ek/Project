@@ -6,19 +6,20 @@ import {Component, OnInit, Output, EventEmitter, Input, SimpleChanges, OnChanges
   styleUrls: ['./card-list.component.css']
 })
 export class CardListComponent implements OnInit , DoCheck, OnChanges{
-  @Input() likes = 0;
+
   @Input() list;
-  oldLikes=0;
+
   text;
   private changengeLog: any;
-  constructor() { }
+  constructor() {
+  }
   @Output() newLikeEvent = new EventEmitter<string>();
   today: number = Date.now();
 
   addLike() {
-    this.likes++;
+    this.list.likes++;
 
-    console.log("You liked the card"+"\n"+"Number of likes:"+this.likes);
+    console.log("You liked the card"+"\n"+"Number of likes:"+this.list.likes);
   }
   ngOnInit(): void {
 

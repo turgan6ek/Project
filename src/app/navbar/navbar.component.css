@@ -1,10 +1,14 @@
 nav {
-  background-color: #50d890;
+  background-color: #65A15A ;
 }
 a {
   color: #272727;
 }
+a:hover {
+  background-color: darkgreen;
+  transition: 2s;
+  color: white;
+}
 li {
   padding: 5px;
-
 }

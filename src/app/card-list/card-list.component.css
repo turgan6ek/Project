@@ -1,4 +1,6 @@
-
+p {
+  font-family: "Kandara";
+}
 .card-footer {
 
 
@@ -10,4 +12,10 @@
   width: 40px;
   border: none;
   background-size: cover;
+}
+.zoom {
+  transition: transform .2s;
+}
+.zoom:hover {
+  transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
