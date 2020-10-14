@@ -1,6 +1,30 @@
 
 <div class="main">
   <app-img-carousel>ngAfterViewInit()</app-img-carousel>
+  <hr>
+  <div class="padd">
+  <div class="midd" style="margin: 70px;">
+    <h1 class="text-center">7 REASONS WHY PLANTS ARE VALUABLE AND IMPORTANT</h1>
+    <hr>
+    <h4 class="text-center">FOOD </h4>
+    <p> The sun is provider of all energy. We eat plants to gather the energy stored in their cells. And we are here because our ancestors foraged plants for food. They learned the ways of agriculture to make it easier and grew plants that produced products such as wheat and corn to eat. Approximately 7,000 different plant species have been cultivated and used as food for people. Field of sunflowers earth day shutterstock_342361277Though humans can live on the consumption of animal products, it is just a step away from plants since cows, pigs, sheep, chickens, rabbits and other animals eat plants to live.</p>
+    <hr>
+    <h4 class="text-center">WATER </h4>
+    <p>  Where there is water, there is life. Plants regulate the water cycle by distributing and purifying the planet’s water supply. Through the act of transpiration, plants move the water from the soil up their roots and out into the atmosphere. Moisture accumulates into clouds and eventually the water droplets are returned back down as rain to revitalize life on earth.</p>
+    <hr>
+    <p>AIR  The air we breath mainly consists of 78% nitrogen and 21% oxygen. But it is oxygen that is vital for our cells to produce energy, energy that originated with the sun. When the sun shines down, plants absorb the sunlight to produce energy and end up releasing oxygen into the air as a by-product of their metabolism.  We in turn inhale the oxygen for our survival and exhale the carbon dioxides plants require. Breath deeply and drink in the oxygen-laden air and realize it’s because of plants we are alive.</p>
+    <hr>
+    <h4 class="text-center">WELLNESS </h4>
+    <p>  The implementation of LEED and WELL Building Standard shows that society is learning the value of incorporating nature or biophilia into man-made environments, both inside and outside for psychological and physical health. Plants advance health, happiness, mindfulness and productivity when weaved inside buildings and throughout the communities. Including living plants inside a home or business revitalizes the air, humidity and lowers stress levels for better wellness.</p>
+    <hr>
+    <h4 class="text-center">HABITAT and CLOTHING </h4>
+    <p>  Plants make up the backbone of earth’s diverse landscape that provide hundreds of unique habitats necessary for life. Flowers dance in the fields while grasses on a hill sway in the wind. Trees strut tall in their habitat and act as the earth’s dynamic lungs, powering life everywhere. Birds pick up straw, leaves, bark, along with feathers, hairs and other items to make a comfy nest in a tree, bush or even tall grasses. Our ancestors used thatched roofs made of grasses or palm fronds, and wood to secure their homes. Industrial hemp was one of the first plants to be spun into usable fiber 10,000 years ago. Plants in all their diversity keep the cycle of life moving.</p>
+    <hr>
+    <h4 class="text-center">CLIMATE </h4>
+    <p>   Excessive carbon released into the environment has been blamed for the current climate change we are experiencing. But rarely is it explained that plants store carbon by pulling it from the air. Plants help keep much of the carbon dioxide produced from our burning of fossils fuels out of the atmosphere. We owe our temperate climate to the perpetual landscape of green that blankets our world.</p>
+  </div>
+  <hr>
+  <h1 class="text-center" style="font-family: 'Book Antiqua'">List of Plants</h1>
   <div class="row row-cols-1 row-cols-md-3 g-4">
     <ng-container *ngIf="showFirst">
       <app-card-list *ngFor="let list of list" [list]="list"  style="padding: 20px"></app-card-list>
@@ -14,4 +38,5 @@
   <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="displayChild">
     <app-card-list *ngFor="let list of list2" [list]="list"  style="padding: 20px"></app-card-list>
   </div>
+</div>
 </div>

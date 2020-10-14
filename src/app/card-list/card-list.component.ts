@@ -17,6 +17,7 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
   today: number = Date.now();
 
   addLike() {
+
     this.list.likes++;
 
     console.log("You liked the card"+"\n"+"Number of likes:"+this.list.likes);
