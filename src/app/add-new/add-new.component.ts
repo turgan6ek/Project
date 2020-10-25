@@ -20,9 +20,9 @@ export class AddNewComponent implements OnInit {
   }
   @Output() newItemEvent = new EventEmitter<any>();
   @Input() list : [];
-  addNewItem(name: string, type: string, origin: string, soil_needs: string, water_needs: string, more: string,
+  addNewItem(name: string, type: string, origin: string, soil_needs: string, waterNeeds: string, more: string,
              size: string, image: string, likes:string)  {
-    this.newItemEvent.emit({name:name,type:type, origin:origin, soilNeeds:soil_needs, water_needs: water_needs, more:more,
+    this.newItemEvent.emit({name:name,type:type, origin:origin, soilNeeds:soil_needs, waterNeeds: waterNeeds, more:more,
                                   size:size,img:image, likes:likes
     });
   }

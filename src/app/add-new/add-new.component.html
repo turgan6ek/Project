@@ -42,7 +42,7 @@
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01">Water needs</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01" #water_needs>
+        <select class="custom-select" id="inputGroupSelect01" #waterNeeds>
           <option selected value="Regular">Regular</option>
           <option value="Very Low">Very Low</option>
           <option value="Under hot, dry, and/or windy conditions">Under hot, dry, and/or windy conditions</option>
@@ -69,7 +69,7 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="addNewItem(name.value, type.value, origin.value,soil_needs.value,water_needs.value,more.value,size.value,image.value, '0')">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="addNewItem(name.value, type.value, origin.value,soil_needs.value,waterNeeds.value,more.value,size.value,image.value, '0')">Save</button>
   </div>
 </ng-template>
 

@@ -14,6 +14,8 @@ import { CardListComponent } from './card-list/card-list.component';
 import { AddNewComponent } from './add-new/add-new.component';
 import {LikeModulePipe} from './card-list/LikeModule.pipe';
 import { RouterModule } from '@angular/router';
+import {LoggingPlant} from './add-new/PlantService/logging.plant';
+import {PlantService} from './add-new/PlantService/plant.service';
 
 const routes = [
   {path : '', component:HomePageComponent},
@@ -46,7 +48,7 @@ const routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [LoggingPlant,PlantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
