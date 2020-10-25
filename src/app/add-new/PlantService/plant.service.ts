@@ -39,9 +39,9 @@ export class PlantService {
         "brightly colored flowers and very attractive long, silver-green leaves."," 4-6 ","https://themysteriousworld.com/wp-content/uploads/2016/08/gazania.webp",0),
 
     ];
-    for (var i = 0; i < plantList.length; i++) {
-      this.loggingPlant.log('List of plants: '+ plantList[i].name);
-    }
+
+      this.loggingPlant.log('Number of loaded plants: '+ plantList.length);
+
 
     return plantList;
 }
