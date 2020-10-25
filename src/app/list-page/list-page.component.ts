@@ -9,7 +9,7 @@ import {Plant} from '../add-new/PlantService/plant';
 })
 export class ListPageComponent implements OnInit, OnChanges, DoCheck {
 
-
+//@Injectable
   constructor(private plantService: PlantService) {
 
   }

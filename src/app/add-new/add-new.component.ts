@@ -1,5 +1,6 @@
 import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
+import {LoggingPlant} from './PlantService/logging.plant';
 
 @Component({
   selector: 'app-add-new',
@@ -25,6 +26,7 @@ export class AddNewComponent implements OnInit {
     this.newItemEvent.emit({name:name,type:type, origin:origin, soilNeeds:soil_needs, waterNeeds: waterNeeds, more:more,
                                   size:size,img:image, likes:likes
     });
+
   }
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
