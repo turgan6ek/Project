@@ -6,5 +6,7 @@
   <div class="row row-cols-md-3 row-cols-md-3 g-4">
     <app-card-list *ngFor="let plantList of plantList" [list]="plantList" ></app-card-list>
   </div>
+  <a routerLink="add">
 <app-add-new (newItemEvent)="addItem($event)"> </app-add-new>
+  </a>
 </div>

@@ -16,11 +16,19 @@ import {LikeModulePipe} from './card-list/LikeModule.pipe';
 import { RouterModule } from '@angular/router';
 import {LoggingPlant} from './add-new/PlantService/logging.plant';
 import {PlantService} from './add-new/PlantService/plant.service';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
+import {addPlantGuardService} from './guards/addPlantGuard.service';
 
 const routes = [
   {path : '', component:HomePageComponent},
   {path : 'blog-page', component:BlogPageComponent},
-  {path : 'list-page', component:ListPageComponent}
+  {path : 'list-page', component:ListPageComponent,
+    children: [
+      {path:'list-page/add', component: AddNewComponent}
+    ],
+    canActivateChild:[AddNewComponent],
+  }
 ]
 
 @NgModule({
@@ -35,7 +43,8 @@ const routes = [
     CardListComponent,
     AddNewComponent,
     LikeModulePipe,
-
+    LoginComponent,
+    RegisterComponent,
   ],
 
   imports: [
@@ -48,7 +57,7 @@ const routes = [
     BrowserModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [LoggingPlant,PlantService],
+  providers: [LoggingPlant,PlantService, addPlantGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

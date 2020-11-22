@@ -6,9 +6,6 @@ a {
 }
 a:hover {
   background-color: gray;
-  transition: 2s;
+  transition: 1s;
   color: white;
-}
-li {
-  padding: 0px;
 }

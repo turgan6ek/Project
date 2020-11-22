@@ -10,10 +10,8 @@ export class addPlantGuardService implements CanActivateChild {
   }
   canActivateChild(): boolean {
 // Check weather route can be activated;
-    if (this.isAdmin)
-    return true;
-    else
-      return false;
+    return confirm('Do you have a permission to edit the list of pages?');
+    //Actually I have to check whether the user is admin or not and depending on that give permission to change(add) plants.
 // false if you want to cancel navigation;
   }
   }
