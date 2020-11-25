@@ -25,9 +25,9 @@ const routes = [
   {path : 'blog-page', component:BlogPageComponent},
   {path : 'list-page', component:ListPageComponent,
     children: [
-      {path:'list-page/add', component: AddNewComponent}
+      {path:'add', component: AddNewComponent}
     ],
-    canActivateChild:[AddNewComponent],
+    canActivateChild:[addPlantGuardService]
   }
 ]
 
