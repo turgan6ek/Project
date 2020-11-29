@@ -16,21 +16,18 @@ import {LikeModulePipe} from './card-list/LikeModule.pipe';
 import { RouterModule } from '@angular/router';
 import {LoggingPlant} from './add-new/PlantService/logging.plant';
 import {PlantService} from './add-new/PlantService/plant.service';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
 import {addPlantGuardService} from './guards/addPlantGuard.service';
+import {AuthModule} from './auth/auth.module';
 
 const routes = [
-  {path : '', component:HomePageComponent},
+  {path: '', component: HomePageComponent},
+  {path : 'home', component:HomePageComponent},
   {path : 'blog-page', component:BlogPageComponent},
-  {path : 'list-page', component:ListPageComponent,
-    children: [
-      {path:'add', component: AddNewComponent}
-    ],
-    canActivateChild:[addPlantGuardService]
+  {path : 'list-page', component:ListPageComponent},
+  {path: "add",component: AddNewComponent,
+    canActivate:[addPlantGuardService]
   },
-  {path : 'login', component: LoginComponent},
-  {path : 'register', component: RegisterComponent}
+
 ]
 
 @NgModule({
@@ -45,8 +42,6 @@ const routes = [
     CardListComponent,
     AddNewComponent,
     LikeModulePipe,
-    LoginComponent,
-    RegisterComponent,
   ],
 
   imports: [
@@ -57,7 +52,8 @@ const routes = [
     MDBBootstrapModule.forRoot(),
     WavesModule,
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    AuthModule
   ],
   providers: [LoggingPlant,PlantService, addPlantGuardService],
   bootstrap: [AppComponent]
