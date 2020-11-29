@@ -18,6 +18,8 @@ import {LoggingPlant} from './add-new/PlantService/logging.plant';
 import {PlantService} from './add-new/PlantService/plant.service';
 import {addPlantGuardService} from './guards/addPlantGuard.service';
 import {AuthModule} from './auth/auth.module';
+import {UserService} from './auth/user.service';
+import {AuthenticationService} from './auth/auth.service';
 
 const routes = [
   {path: '', component: HomePageComponent},
@@ -53,9 +55,9 @@ const routes = [
     WavesModule,
     BrowserModule,
     RouterModule.forRoot(routes),
-    AuthModule
+    AuthModule,
   ],
-  providers: [LoggingPlant,PlantService, addPlantGuardService],
+  providers: [LoggingPlant,PlantService, addPlantGuardService, UserService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
