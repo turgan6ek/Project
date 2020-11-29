@@ -16,8 +16,8 @@ import {LikeModulePipe} from './card-list/LikeModule.pipe';
 import { RouterModule } from '@angular/router';
 import {LoggingPlant} from './add-new/PlantService/logging.plant';
 import {PlantService} from './add-new/PlantService/plant.service';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
 import {addPlantGuardService} from './guards/addPlantGuard.service';
 
 const routes = [
@@ -28,7 +28,9 @@ const routes = [
       {path:'add', component: AddNewComponent}
     ],
     canActivateChild:[addPlantGuardService]
-  }
+  },
+  {path : 'login', component: LoginComponent},
+  {path : 'register', component: RegisterComponent}
 ]
 
 @NgModule({
