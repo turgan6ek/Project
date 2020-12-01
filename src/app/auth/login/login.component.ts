@@ -23,6 +23,7 @@ export class LoginComponent implements OnInit {
     if (this.username != '' && this.password != '') {
       if (this._auth.login(this.username, this.password)) {
         this._router.navigate(["/home"]);
+        window.location.reload();
       }
       else
         alert("Wrong username or password");

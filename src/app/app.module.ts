@@ -20,15 +20,16 @@ import {addPlantGuardService} from './guards/addPlantGuard.service';
 import {AuthModule} from './auth/auth.module';
 import {UserService} from './auth/user.service';
 import {AuthenticationService} from './auth/auth.service';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {LoginPipe} from './navbar/login.pipe';
+import {AuthGuard} from './guards/auth.guard';
 
 const routes = [
   {path: '', component: HomePageComponent},
   {path : 'home', component:HomePageComponent},
-  {path : 'blog-page', component:BlogPageComponent},
+  {path : 'blog-page', component:BlogPageComponent, canActivate: [AuthGuard]},
   {path : 'list-page', component:ListPageComponent},
-  {path: "add",component: AddNewComponent,
-    canActivate:[addPlantGuardService]
-  },
+
 
 ]
 
@@ -44,6 +45,7 @@ const routes = [
     CardListComponent,
     AddNewComponent,
     LikeModulePipe,
+    LoginPipe,
   ],
 
   imports: [
@@ -56,6 +58,7 @@ const routes = [
     BrowserModule,
     RouterModule.forRoot(routes),
     AuthModule,
+    BrowserAnimationsModule,
   ],
   providers: [LoggingPlant,PlantService, addPlantGuardService, UserService, AuthenticationService],
   bootstrap: [AppComponent]

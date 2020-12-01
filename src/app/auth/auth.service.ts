@@ -22,6 +22,7 @@ export class AuthenticationService {
   logout() {
     localStorage.removeItem('currentUser');
     localStorage.removeItem('username');
+    window.location.reload();
   }
   public get loggedIn(): boolean {
     return (localStorage.getItem('currentUser') !== null);

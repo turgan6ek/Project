@@ -3,7 +3,7 @@
   <h1 class="text-center" style="color: black ; font-family: 'Book Antiqua'">Plants</h1>
   <h3 class="text-center" style="color: black; font-family: 'Book Antiqua'"> Here you can find info about various types of plants</h3>
   <br>
-  <div class="row row-cols-md-3 row-cols-md-3 g-4">
+  <div class="row row-cols-md-4 row-cols-md-3 g-4">
     <app-card-list *ngFor="let plantList of plantList" [list]="plantList" ></app-card-list>
   </div>
   <a routerLink="/add">

@@ -25,8 +25,15 @@ export class CardListComponent implements OnInit , DoCheck, OnChanges{
   ngOnInit(): void {
 
   }
-
-
+  isDisplayed = false;
+  toDisplay() {
+      if (this.isDisplayed) {
+        this.isDisplayed = false;
+      }
+      else {
+        this.isDisplayed = true;
+      }
+  }
   ngOnChanges(changes:SimpleChanges): void {
     this.addLike();
   }

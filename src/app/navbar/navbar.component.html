@@ -1,5 +1,5 @@
 <!--Navbar-->
-<nav class="navbar navbar-expand-lg navbar-dark primary-color">
+<nav class="navbar navbar-expand-lg navbar-dark">
 
   <!-- Navbar brand -->
   <a class="navbar-brand" routerLink="/home" style="padding-left: 60px;padding-right: 60px;">Plant Wiki</a>
@@ -31,12 +31,21 @@
     </ul>
     <!-- Links -->
 
-    <form class="form-inline">
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <div class="btn-group" mdbDropdown style="padding-right: 100px">
+        <a mdbDropdownToggle type="button" mdbBtn color="dark" class="dropdown-toggle waves-light"
+           mdbWavesEffect>
+          {{username | loginOr}}
+        </a>
 
-      <div class="md-form my-0">
-        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <div class="dropdown-menu dropdown-primary" style="background-color: black">
+          <a *ngIf="!username || 0 === username.length" class="dropdown-item" routerLink="/login">Login</a>
+          <div class="divider dropdown-divider"></div>
+          <a *ngIf="!username || 0 === username.length" class="dropdown-item" routerLink="/register">Register</a>
+          <a (click)="auth.logout()" *ngIf="username !== null && username !== ''" class="dropdown-item" href="#">Logout</a>
+        </div>
       </div>
-    </form>
+    </ul>
   </div>
   <!-- Collapsible content -->
 

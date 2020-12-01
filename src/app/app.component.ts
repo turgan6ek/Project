@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  constructor(private Router: Router, private auth: AuthenticationService) {
+  constructor(private Router: Router, public auth: AuthenticationService) {
   }
   title = 'Project';
   username = localStorage.getItem('username');

@@ -1,50 +1,77 @@
 
 
-  <div class="card  h-100" style="border: black 1px solid">
-    <img class="card-img-top" src="{{list.img}}" alt="Card image cap" height="200px;">
-    <div class="card-body">
-      <h5 class="card-title">{{list.name}}</h5>
-      <p class="card-text">
-        {{list.more}}
-      </p>
-      <ul style="list-style: none;padding-left: 0;">
-        <li><p class="card-text">
-          <span >Type: </span> {{list.type}}
-        </p></li>
-        <li><p class="card-text">
-          <span >Origin: </span> {{list.origin}}
-        </p></li>
-        <li><p class="card-text">
-          <span >Size: </span> {{list.size}}
-        </p></li>
-      </ul>
-      <div >
-        <p class="card-text" style="float: left; display: inline; padding-right: 70px; ">
-          <img src="assets/water.png"  height="30px;" width="30px">
-          {{list.waterNeeds}}
-        </p>
-        <p class="card-text" style="float: left; display: inline;">
-          <img src="https://cdn.pixabay.com/photo/2014/12/21/23/36/soil-575641_1280.png"  height="30px;" width="30px">
-          <span > </span>
-          {{list.soilNeeds}}
-        </p>
+  <div class="card  h-100" style="border: none">
+    <div class="img-container">
+      <input type="image" class="card-img-top" style="border-radius: 15px" (click)="basicModal.show()" src="{{list.img}}" mdbWavesEffect>
+
+      <div>
+        <p class="img__description text-center" >Click the image to see more</p>
+      </div>
       </div>
 
+  </div>
 
-    </div>
-    <ul class="list-group list-group-flush">
-    </ul>
-    <div class="card-body" style="padding-bottom: 0;">
-      <p class="card-text"><small class="text-muted">Last updated on {{today  |  date:'mediumDate'}}</small></p>
-      <div class="like">
-        <div class="card-button" style="display: inline-block">
-          <p style="display: inline">
-            <button class="like-button" mdbPopover="Liked!" (click)="addLike()"></button>
-            <span style="font-size: 25px;">{{list.likes | likeConverter}}</span></p>
-
+  <div mdbModal #basicModal="mdbModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myBasicModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close pull-right" aria-label="Close" (click)="basicModal.hide()">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title w-100" id="myModalLabel">{{list.name}}</h4>
         </div>
+        <div class="modal-body">
+          <div>
+            <div class="card-body">
+              <img src="{{list.img}}" class="card-img-bottom rounded" style="padding-bottom: 15px">
+              <p class="card-text">
+                {{list.more}}
+              </p>
+              <ul style="list-style: none;padding-left: 0;">
+                <li><p class="card-text">
+                  <span >Type: </span> {{list.type}}
+                </p></li>
+                <li><p class="card-text">
+                  <span >Origin: </span> {{list.origin}}
+                </p></li>
+                <li><p class="card-text">
+                  <span >Size: </span> {{list.size}}
+                </p></li>
+              </ul>
+              <div >
+                <p class="card-text" style="float: left; display: inline; padding-right: 70px; ">
+                  <img src="assets/water.png"  height="30px;" width="30px">
+                  {{list.waterNeeds}}
+                </p>
+                <p class="card-text" style="float: left; display: inline;">
+                  <img src="https://cdn.pixabay.com/photo/2014/12/21/23/36/soil-575641_1280.png"  height="30px;" width="30px">
+                  <span > </span>
+                  {{list.soilNeeds}}
+                </p>
+              </div>
 
+
+            </div>
+            <ul class="list-group list-group-flush">
+            </ul>
+            <div class="card-body" style="padding-bottom: 0;">
+              <p class="card-text"><small class="text-muted">Last updated on {{today  |  date:'mediumDate'}}</small></p>
+              <div class="like">
+                <div class="card-button" style="display: inline-block">
+                  <p style="display: inline">
+                    <button class="like-button" mdbPopover="Liked!" (click)="addLike()"></button>
+                    <span style="font-size: 25px;">{{list.likes | likeConverter}}</span></p>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+
+          <button type="button" mdbBtn color="dark" class="waves-light" aria-label="Close" (click)="basicModal.hide()" mdbWavesEffect>Close</button>
+        </div>
       </div>
     </div>
   </div>
-
