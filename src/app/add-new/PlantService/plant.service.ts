@@ -1,11 +1,18 @@
 import {Plant} from './plant';
 import {Injectable} from '@angular/core';
 import {LoggingPlant} from './logging.plant';
+import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class PlantService {
-  constructor(private loggingPlant: LoggingPlant){
+  constructor(private loggingPlant: LoggingPlant,private httpClient: HttpClient){
   }
+  private REST_API_SERVER = "http://localhost:3000";
+
+  public sendGetRequest(){
+    return this.httpClient.get(this.REST_API_SERVER);
+  }
+
   getPlants(){
     let plantList: Plant[];
     plantList = [

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {UserService} from '../user.service';
-import {User} from '../User';
+import {User} from '../User.model';
 import {AuthenticationService} from '../auth.service';
 import {Router} from '@angular/router';
 
@@ -16,9 +16,10 @@ export class LoginComponent implements OnInit {
       this._router.navigate(['home']);
     }
   }
-  userList = this.userService.getUsers();
+  User: any = [];
   username;
   password;
+
   login(): void {
     if (this.username != '' && this.password != '') {
       if (this._auth.login(this.username, this.password)) {
@@ -29,8 +30,11 @@ export class LoginComponent implements OnInit {
         alert("Wrong username or password");
     }
   }
-
+  loadUsers(){
+    return this.userService.getUsers().subscribe(data => this.User = data);
+  }
   ngOnInit(): void {
+    this.loadUsers();
   }
 
 }

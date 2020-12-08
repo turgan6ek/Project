@@ -1,15 +1,15 @@
-import { Injectable } from '@angular/core';
+import {Injectable, OnInit} from '@angular/core';
 import {UserService} from './user.service';
 @Injectable({
   providedIn: 'root'
 })
-export class AuthenticationService {
-  constructor(private UserService : UserService) {
+export class AuthenticationService{
+  constructor(private userService : UserService) {
   }
-  userList = this.UserService.getUsers();
+  User = this.userService.getUsers().subscribe(data => this.User = data)
 
   login(username: string, password: string) {
-    for (let user of this.userList) {
+    for (let user of this.User) {
       if (username == user.email && password == user.password) {
         localStorage.setItem('currentUser', "loggedin");
         localStorage.setItem('username',username);
@@ -27,4 +27,5 @@ export class AuthenticationService {
   public get loggedIn(): boolean {
     return (localStorage.getItem('currentUser') !== null);
   }
+
 }
