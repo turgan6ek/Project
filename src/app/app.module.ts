@@ -24,6 +24,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {LoginPipe} from './navbar/login.pipe';
 import {AuthGuard} from './guards/auth.guard';
 import {HttpClientModule} from '@angular/common/http';
+import {FormsModule} from '@angular/forms';
 
 const routes = [
   {path: '', component: HomePageComponent},
@@ -61,7 +62,7 @@ const routes = [
     RouterModule.forRoot(routes),
     AuthModule,
     BrowserAnimationsModule,
-
+    FormsModule
   ],
   providers: [LoggingPlant,PlantService, addPlantGuardService, UserService, AuthenticationService],
   bootstrap: [AppComponent]
