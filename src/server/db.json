@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "first_name": "Admin",
+      "last_name": "Admin",
+      "email": "admin@admin.com",
+      "password": "12345678",
+      "isAdmin": "true"
+    },
+    {
+      "id": 2,
+      "first_name": "Yerulan",
+      "last_name": "Turganbek",
+      "email": "turgan6ek@gmail.com",
+      "password": "12345678",
+      "isAdmin": "false"
+    },
+    {
+      "id": 3,
+      "first_name": "Ulan",
+      "last_name": "Turganbek",
+      "email": "eturganbek01@gmail.com",
+      "password": "12345678",
+      "isAdmin": "false"
+    }
+  ]
+}

@@ -26,7 +26,7 @@ export class AddNewComponent implements OnInit {
     this.newItemEvent.emit({name:name,type:type, origin:origin, soilNeeds:soil_needs, waterNeeds: waterNeeds, more:more,
                                   size:size,img:image, likes:likes
     });
-
+    this.modalService.dismissAll();
   }
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
