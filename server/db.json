@@ -88,26 +88,26 @@
     },
     {
       "id": 6,
-      "name": "Dahlia",
+      "name": "Guldavari",
       "type": "Flower",
-      "origin": "Central America",
+      "origin": "East Asia",
       "soilNeeds": "7.0 pH",
       "waterNeeds": "Regular",
-      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
-      "size": "12-24",
-      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
+      "more": "Chrysanthemums , sometimes called mums or chrysanths, are flowering plants of the genus Chrysanthemum in the family Asteraceae. They are native to East Asia and northeastern Europe. Most species originate from East Asia and the center of diversity is in China. Countless horticultural varieties and cultivars exist.",
+      "size": "4-6",
+      "img": "https://images-na.ssl-images-amazon.com/images/I/51h3IIbar-L.jpg",
       "likes": "0"
     },
     {
       "id": 7,
-      "name": "Dahlia",
+      "name": "Lantana",
       "type": "Flower",
-      "origin": "Central America",
+      "origin": "Africa",
       "soilNeeds": "7.0 pH",
       "waterNeeds": "Regular",
-      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
-      "size": "12-24",
-      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
+      "more": "The various colors ensure that your garden is kept beautiful at all times. The Lantana has broad and oval-shaped leaves that rough on the surface. This Lantana plant also bears berry-like fruits that turn into black or purple when ripened. The Lantana plant dies to the ground during freezing temperatures and quickly grows back during spring. Its flowers are well arranged in clusters known as umbels.",
+      "size": "12-14",
+      "img": "https://gardenworktoday.com/wp-content/uploads/2019/12/lantana.jpg",
       "likes": "0"
     }
   ]
