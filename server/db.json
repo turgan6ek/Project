@@ -87,7 +87,7 @@
       "likes": 0
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Dahlia",
       "type": "Flower",
       "origin": "Central America",
@@ -99,19 +99,7 @@
       "likes": "0"
     },
     {
-      "id": "7",
-      "name": "Dahlia",
-      "type": "Flower",
-      "origin": "Central America",
-      "soilNeeds": "7.0 pH",
-      "waterNeeds": "Regular",
-      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
-      "size": "12-24",
-      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
-      "likes": "0"
-    },
-    {
-      "id": "8",
+      "id": 7,
       "name": "Dahlia",
       "type": "Flower",
       "origin": "Central America",

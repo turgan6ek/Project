@@ -8,7 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ImgCarouselComponent } from './home-page/img-carousel/img-carousel.component';
 import {CarouselModule, MDBBootstrapModule, WavesModule} from 'angular-bootstrap-md';
 import { HomePageComponent } from './home-page/home-page.component';
-import { BlogPageComponent } from './blog-page/blog-page.component';
 import { ListPageComponent } from './list-page/list-page.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { AddNewComponent } from './add-new/add-new.component';
@@ -29,8 +28,9 @@ import {FormsModule} from '@angular/forms';
 const routes = [
   {path: '', component: HomePageComponent},
   {path : 'home', component:HomePageComponent},
-  {path : 'blog-page', component:BlogPageComponent, canActivate: [AuthGuard]},
-  {path : 'list-page', component:ListPageComponent},
+  {path : 'list-page', component:ListPageComponent, canActivate:[AuthGuard],canActivateChild: [addPlantGuardService],
+  children: [{path:'add-new', component:AddNewComponent},]}
+
 ]
 
 @NgModule({
@@ -40,7 +40,6 @@ const routes = [
     FooterComponent,
     ImgCarouselComponent,
     HomePageComponent,
-    BlogPageComponent,
     ListPageComponent,
     CardListComponent,
     AddNewComponent,

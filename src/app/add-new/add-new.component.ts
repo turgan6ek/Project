@@ -1,7 +1,5 @@
 import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
-import {LoggingPlant} from './PlantService/logging.plant';
-import {UserService} from '../auth/user.service';
 import {PlantService} from './PlantService/plant.service';
 import {Router} from '@angular/router';
 
@@ -21,7 +19,7 @@ export class AddNewComponent implements OnInit {
       window.location.reload();
     })
   }
-
+  username = localStorage.getItem('username');
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
       this.closeResult = `Closed with: ${result}`;

@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
-import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import {Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, CanLoad, CanActivateChild} from '@angular/router';
 @Injectable({ providedIn: 'root' })
-export class addPlantGuardService implements CanActivate {
+export class addPlantGuardService implements CanActivateChild {
   constructor(private _router: Router) { }
-  canActivate(next: ActivatedRouteSnapshot, state: RouterStateSnapshot) {
-    if (localStorage.getItem('currentUser')) {
+  canActivateChild(next: ActivatedRouteSnapshot, state: RouterStateSnapshot): Promise<boolean>|boolean {
+    if (localStorage.getItem('username')=="admin@admin.com") {
       return true;
     }
     this._router.navigate(['']);

@@ -105,11 +105,11 @@
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="addPlant('')">Save</button>
+    <button type="button" class="btn btn-outline-dark" [disabled]="!form.valid" (click)="addPlant('')">Save</button>
   </div>
 </ng-template>
-
-  <button class="btn btn-lg btn-outline-dark " (click)="open(content)" style="width: 80%; margin-left: 120px;">Add Plant </button>
-
+  <a >
+  <button class="btn btn-lg btn-outline-dark " *ngIf="username=='admin@admin.com'" (click)="open(content)" style="width: 80%; margin-left: 120px;">Add Plant </button>
+  </a>
 <hr>
 
