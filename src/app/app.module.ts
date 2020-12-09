@@ -31,8 +31,6 @@ const routes = [
   {path : 'home', component:HomePageComponent},
   {path : 'blog-page', component:BlogPageComponent, canActivate: [AuthGuard]},
   {path : 'list-page', component:ListPageComponent},
-
-
 ]
 
 @NgModule({

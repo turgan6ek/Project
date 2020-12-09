@@ -20,9 +20,6 @@ export class HomePageComponent implements  OnChanges, OnInit, AfterViewInit, Aft
     this.showFirst = true;
   }
   }
-  plantList = this.plantService.getPlants();
-  @Input() list = [this.plantList[0],this.plantList[1],this.plantList[2]];
-  list2 = [this.plantList[3],this.plantList[4],this.plantList[5]];
   toggle() { this.displayChild = ! this.displayChild; }
 
   ngOnChanges() { console.log("ListComponent:OnChanges"); }

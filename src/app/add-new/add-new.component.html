@@ -6,43 +6,67 @@
     </button>
   </div>
   <div class="modal-body">
-    <form>
+    <form #form = "ngForm">
       <div class="input-group mb-3">
         <div class="input-group-prepend">
-          <span class="input-group-text" id="basic-addon1">Name</span>
+          <span class="input-group-text" id="basic-addon1" >Name</span>
         </div>
-        <input type="text" class="form-control"  aria-describedby="basic-addon1" #name>
+        <input type="text" class="form-control" required  aria-describedby="basic-addon1" class="form-control" [(ngModel)]="plantDetails.name" name = "name" #name = "ngModel">
+        <div *ngIf="name.invalid && (name.dirty || name.touched)"
+             class="alert alert-danger">
+          <div *ngIf="name.errors.required">
+            Name is required.
+          </div>
+        </div>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" >Type</span>
         </div>
-        <input type="text" class="form-control"  aria-describedby="basic-addon1" #type>
+        <input type="text" class="form-control"  aria-describedby="basic-addon1" required class="form-control" [(ngModel)]="plantDetails.type" name = "type" #type = "ngModel">
+        <div *ngIf="type.invalid && (type.dirty || type.touched)"
+             class="alert alert-danger">
+          <div *ngIf="type.errors.required">
+            Type is required.
+          </div>
+        </div>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" >Size</span>
         </div>
-        <input type="text" class="form-control"  aria-describedby="basic-addon1" #size>
+        <input type="text" class="form-control"  aria-describedby="basic-addon1" required class="form-control" [(ngModel)]="plantDetails.size" name = "size" #size = "ngModel">
+        <div *ngIf="size.invalid && (size.dirty || size.touched)"
+             class="alert alert-danger">
+          <div *ngIf="size.errors.required">
+            Size is required.
+          </div>
+        </div>
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" >Origin</span>
         </div>
-        <input type="text" class="form-control"  aria-describedby="basic-addon1" #origin>
-      </div>
+        <input type="text" class="form-control"  aria-describedby="basic-addon1" required class="form-control" [(ngModel)]="plantDetails.origin" name = "origin" #origin ="ngModel">
+        <div *ngIf="origin.invalid && (origin.dirty || origin.touched)"
+             class="alert alert-danger">
+          <div *ngIf="origin.errors.required">
+            Origin is required.
+          </div>
+        </div>
+        </div>
       <label for="basic-url">Image URL</label>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <span class="input-group-text" id="basic-addon3">https://img/.png</span>
         </div>
-        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" #image>
+        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" required class="form-control" [(ngModel)]="plantDetails.img" name = "img" #img = "ngModel">
       </div>
       <div class="input-group mb-3">
         <div class="input-group-prepend">
           <label class="input-group-text" for="inputGroupSelect01">Water needs</label>
         </div>
-        <select class="custom-select" id="inputGroupSelect01" #waterNeeds>
+        <select class="custom-select" id="inputGroupSelect01" class="form-control" required [(ngModel)]="plantDetails.waterNeeds" name = "waters" #waters = "ngModel">
           <option selected value="Regular">Regular</option>
           <option value="Very Low">Very Low</option>
           <option value="Under hot, dry, and/or windy conditions">Under hot, dry, and/or windy conditions</option>
@@ -53,7 +77,13 @@
         <div class="input-group-prepend">
           <span class="input-group-text">Soil-needs</span>
         </div>
-        <input type="text" class="form-control" aria-label="" #soil_needs>
+        <input type="text" class="form-control" aria-label="" class="form-control" required [(ngModel)]="plantDetails.soilNeeds" name = "soils" #soil = "ngModel">
+        <div *ngIf="soil.invalid && (soil.dirty || soil.touched)"
+             class="alert alert-danger">
+          <div *ngIf="soil.errors.required">
+            Size is required.
+          </div>
+        </div>
         <div class="input-group-append">
 
           <span class="input-group-text">pH</span>
@@ -64,12 +94,18 @@
         <div class="input-group-prepend">
           <span class="input-group-text">More about plant:</span>
         </div>
-        <textarea class="form-control" aria-label="With textarea" #more></textarea>
+        <textarea class="form-control" aria-label="With textarea" class="form-control" required [(ngModel)]="plantDetails.more" name = "more" #more = "ngModel"></textarea>
+        <div *ngIf="more.invalid && (more.dirty || more.touched)"
+             class="alert alert-danger">
+          <div *ngIf="more.errors.required">
+            Write some details about this plant please.
+          </div>
+        </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-outline-dark" (click)="addNewItem(name.value, type.value, origin.value,soil_needs.value,waterNeeds.value,more.value,size.value,image.value, '0')">Save</button>
+    <button type="button" class="btn btn-outline-dark" (click)="addPlant('')">Save</button>
   </div>
 </ng-template>
 

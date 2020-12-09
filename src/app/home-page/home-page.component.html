@@ -24,19 +24,6 @@
     <p>   Excessive carbon released into the environment has been blamed for the current climate change we are experiencing. But rarely is it explained that plants store carbon by pulling it from the air. Plants help keep much of the carbon dioxide produced from our burning of fossils fuels out of the atmosphere. We owe our temperate climate to the perpetual landscape of green that blankets our world.</p>
   </div>
   <hr>
-  <h1 class="text-center" style="font-family: 'Book Antiqua'">List of Plants</h1>
-  <div class="row row-cols-1 row-cols-md-3 g-4">
-    <ng-container *ngIf="showFirst">
-      <app-card-list *ngFor="let list of list" [list]="list"  style="padding: 20px"></app-card-list>
-    </ng-container>
-  </div>
-  <div class="more1">
-      <button class="m-button" (click)="toggle()">
-        <p class="text-center" [ngStyle]="{'color':'white'}">C{{'LICK HERE TO SEE MORE'|lowercase}}</p>
-      </button>
-  </div>
-  <div class="row row-cols-1 row-cols-md-3 g-4" *ngIf="displayChild">
-    <app-card-list *ngFor="let list of list2" [list]="list"  style="padding: 20px"></app-card-list>
-  </div>
+    <div></div>
 </div>
 </div>

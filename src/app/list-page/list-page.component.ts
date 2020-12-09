@@ -1,6 +1,6 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges, DoCheck} from '@angular/core';
 import {PlantService} from '../add-new/PlantService/plant.service';
-import {Plant} from '../add-new/PlantService/plant';
+import {Plant} from '../add-new/PlantService/Plant.model';
 
 @Component({
   selector: 'app-list-page',
@@ -13,11 +13,8 @@ export class ListPageComponent implements OnInit, OnChanges, DoCheck {
   constructor(private plantService: PlantService) {
 
   }
-  plantList = this.plantService.getPlants();
+  Plant = this.plantService.getPlants().subscribe(data => this.Plant = data)
   ngOnInit(): void {
-  }
-  addItem(plant : any) {
-    this.plantList.push(plant);
   }
   ngOnChanges(changes: SimpleChanges): void {
   }

@@ -24,5 +24,103 @@
       "password": "12345678",
       "isAdmin": "false"
     }
+  ],
+  "plants": [
+    {
+      "id": 1,
+      "name": "Dahlia",
+      "type": "Flower",
+      "origin": "Central America",
+      "soilNeeds": "7.0 pH",
+      "waterNeeds": "Regular",
+      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
+      "size": "12-24",
+      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
+      "likes": 0
+    },
+    {
+      "id": 2,
+      "name": "Cherry Blossom",
+      "type": "Tree",
+      "origin": "Japan",
+      "soilNeeds": "6.0 pH",
+      "waterNeeds": "Regular",
+      "more": "Cherry blossoms symbolize the arrival of Spring, the season of flowers. The beautiful pink and white blossom open at the end of March or beginning of April. The blooming period can last for 14 days.",
+      "size": "4-6 ",
+      "img": "https://themysteriousworld.com/wp-content/uploads/2016/08/cherry-blossom.webp",
+      "likes": 0
+    },
+    {
+      "id": 3,
+      "name": "Bleeding Heart",
+      "type": "Flower",
+      "origin": "Siberia",
+      "soilNeeds": " 6.5 pH",
+      "waterNeeds": "Regular ",
+      "more": "This beautiful, spring-blooming bleeding heart flower grows well in a moist, cool climate. On blooming, up to 20 heart-shaped flowers would open on each arching stem.",
+      "size": "6",
+      "img": "https://themysteriousworld.com/wp-content/uploads/2016/08/bleeding-hearts.webp",
+      "likes": 1
+    },
+    {
+      "id": 4,
+      "name": "Water Lilies",
+      "type": "Flower",
+      "origin": "North America",
+      "soilNeeds": "6.5 pH ",
+      "waterNeeds": "Regular ",
+      "more": "Probably the queen of all aquatic flowers in the world. To your surprise, there are 70 different types of water lilies in the world. They grow only in still, shallow freshwater ecosystems like ponds. ",
+      "size": " 4-6",
+      "img": "https://themysteriousworld.com/wp-content/uploads/2016/08/water-lilly.webp",
+      "likes": 0
+    },
+    {
+      "id": 5,
+      "name": "Water Lilies",
+      "type": "Flower",
+      "origin": "North America",
+      "soilNeeds": "6.5 pH ",
+      "waterNeeds": "Regular ",
+      "more": "Probably the queen of all aquatic flowers in the world. To your surprise, there are 70 different types of water lilies in the world. They grow only in still, shallow freshwater ecosystems like ponds. ",
+      "size": " 4-6",
+      "img": "https://themysteriousworld.com/wp-content/uploads/2016/08/water-lilly.webp",
+      "likes": 0
+    },
+    {
+      "id": "6",
+      "name": "Dahlia",
+      "type": "Flower",
+      "origin": "Central America",
+      "soilNeeds": "7.0 pH",
+      "waterNeeds": "Regular",
+      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
+      "size": "12-24",
+      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
+      "likes": "0"
+    },
+    {
+      "id": "7",
+      "name": "Dahlia",
+      "type": "Flower",
+      "origin": "Central America",
+      "soilNeeds": "7.0 pH",
+      "waterNeeds": "Regular",
+      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
+      "size": "12-24",
+      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
+      "likes": "0"
+    },
+    {
+      "id": "8",
+      "name": "Dahlia",
+      "type": "Flower",
+      "origin": "Central America",
+      "soilNeeds": "7.0 pH",
+      "waterNeeds": "Regular",
+      "more": "Dahlia is a genus of plants with large brightly-colored flowers. They are from Mexico, Central America, and Colombia. ' +\n        'There are at least 36 species of Dahlia. Dahlia are often grown in flower gardens. This flower grows well away from strong, direct ' +\n        'sunlight.'",
+      "size": "12-24",
+      "img": "https://wallpaperset.com/w/full/8/1/c/489991.jpg",
+      "likes": "0"
+    }
   ]
 }

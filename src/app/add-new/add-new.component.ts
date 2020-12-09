@@ -1,6 +1,9 @@
 import {Component, OnInit, Output, EventEmitter, Input} from '@angular/core';
 import {ModalDismissReasons, NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {LoggingPlant} from './PlantService/logging.plant';
+import {UserService} from '../auth/user.service';
+import {PlantService} from './PlantService/plant.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-add-new',
@@ -8,9 +11,16 @@ import {LoggingPlant} from './PlantService/logging.plant';
   styleUrls: ['./add-new.component.css']
 })
 export class AddNewComponent implements OnInit {
-
+  @Input() plantDetails = {id: '', name:'', type:'',origin:'', soilNeeds:'', waterNeeds:'', more:'', size:'', img:'',likes:0}
   closeResult = '';
-  constructor(private modalService: NgbModal) {}
+  constructor(private modalService: NgbModal, private plantService: PlantService, public router: Router) {}
+
+  addPlant(dataPlant){
+    this.plantService.createPlant(this.plantDetails).subscribe((data:{})=>{
+      this.router.navigate(['/login']);
+      window.location.reload();
+    })
+  }
 
   open(content) {
     this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
@@ -19,15 +29,8 @@ export class AddNewComponent implements OnInit {
       this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
     });
   }
-  @Output() newItemEvent = new EventEmitter<any>();
-  @Input() list : [];
-  addNewItem(name: string, type: string, origin: string, soil_needs: string, waterNeeds: string, more: string,
-             size: string, image: string, likes:string)  {
-    this.newItemEvent.emit({name:name,type:type, origin:origin, soilNeeds:soil_needs, waterNeeds: waterNeeds, more:more,
-                                  size:size,img:image, likes:likes
-    });
-    this.modalService.dismissAll();
-  }
+
+
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';
